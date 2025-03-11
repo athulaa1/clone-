@@ -9,10 +9,19 @@ const HeaderContainer = styled.header`
   background-color: #333;
   color: white;
   padding: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const Logo = styled.img`
   width: 100px;
+
+  @media (max-width: 768px) {
+    width: 80px;
+  }
 `;
 
 const NavLinks = styled.div`
@@ -21,6 +30,17 @@ const NavLinks = styled.div`
     margin: 0 15px;
     text-decoration: none;
     font-size: 18px;
+
+    @media (max-width: 768px) {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 `;
 

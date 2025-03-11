@@ -12,14 +12,20 @@ const HomeContainer = styled.div`
 const Title = styled.h1`
   color: #333;
   text-align: center;
+  margin-bottom: 20px;
+`;
+
+const Subtitle = styled.h2`
+  color: #555;
+  text-align: center;
   margin-bottom: 40px;
 `;
 
 const MenuGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 cards in a row */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
 `;
 
@@ -81,7 +87,7 @@ const Home = () => {
   return (
     <HomeContainer>
       <Title>Cafe Coffee Day</Title>
-        <h2>Indroducing Our All-New Summer Beverage  Range</h2>
+      <Subtitle>Introducing Our All-New Summer Beverage Range</Subtitle>
       <MenuGrid>
         {menuItems.map(item => (
           <MenuCard key={item.id}>
